@@ -1,2 +1,2 @@
 ### Javascript Reverse Application
-Using HTML, Javascript, custom CSS & Bootstrap to design an application that captures user input and then executes code to reverse that input, and then display the reversed input.
+Using HTML, Javascript, custom CSS & Bootstrap to design an application that captures user input and then executes code to reverse that input, and then displays the reversed input.
