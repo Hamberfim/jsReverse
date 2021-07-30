@@ -41,7 +41,8 @@
                         <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://github.com/Hamberfim/jsReverse">Project Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/Hamberfim/jsReverse">Project Git
+                            Repo</a>
                     </li>
                 </ul>
             </div>
@@ -113,61 +114,32 @@
                 </div>
                 <div class="col-md-4">
                     <!-- Code Description -->
-                    <h5>|function|</h5>
-                    <p>|description|</p>
+                    <h3 class="fw-bold">JS Reverse</h3>
+                    <p>Using HTML, JavaScript, custom CSS & Bootstrap to design an application that captures user input
+                        and then executes code to reverse that input, displaying the reversed input.</p>
+                    <h5>getValue() function </h5>
+                    <p>Here we use javascript to set an inline alert message's css class to 'invisible' and to "Get" a
+                        user input field value in the HTML file by using
+                        <span class="fw-bold">document.getElementById</span>
+                        to locate the html tags with id's of 'alert' and 'userString'.</p>
                     <br>
-                    <h5>|function|</h5>
-                    <p>|description|</p>
+                    <h5>reverseString() function </h5>
+                    <p>Then we pass the 'userString' array to a logic function that uses a decrementing <span
+                            class="fw-bold">for loop</span> to move
+                        backwards through the index of the string array where each index item is cancatenated and then
+                        added to the
+                        empty <span class="fw-bold">reverseStr = []</span> array. Once the <span class="fw-bold">for
+                            loop</span> is complete we
+                        return this reversed array
+                        back to the <span class="fw-bold">getValue()</span> controller function.</p>
                     <br>
-                    // Controller function
-                    // get the input string value
-                    function getValue() {
-
-                        // make sure alert msg is not initially visible
-                        document.getElementById('alert').classList.add('invisible');
-
-                        // get the user input string
-                        let userStr = document.getElementById('userString').value;
-
-                        // call the reverse function
-                        let reverseStr = reverseString(userStr);
-
-                        // pass the reversed string to the display function
-                        displayString(reverseStr);
-
-                    }
-
-                    // logic function
-                    // reverse the string value
-                    function reverseString(userStr) {
-
-                        // declare empty array to be populated
-                        let reverseStr = [];
-
-                        // reverse string with a decrementing for loop
-                        for (let i = userStr.length - 1; i >= 0; i--) {
-                            // concatenate and populate the array with index values
-                            reverseStr += userStr[i];
-                            
-                        }
-
-                        // retrun the reversed string
-                        return reverseStr;
-
-                    }
-
-                    // view function
-                    // display the reversed string value back to the page
-                    function displayString(reverseStr) {
-
-                        // write to the page using a template literal
-                        document.getElementById('msg').innerHTML = `${reverseStr}`;
-
-                        // turn on inline alert success message
-                        // (remove 'invisible' from the class listings) 
-                        document.getElementById('alert').classList.remove('invisible');
-
-                    }
+                    <h5>displayString() function </h5>
+                    <p>From the Controller function we call the view function displayString() passing it the reversed
+                        array variable 'reverseStr'. Using <span class="fw-bold">getElementbyId</span> and it's <span
+                            class="fw-bold">innerHTML</span>
+                        property we locate the html tag with id of 'msg' and write the reversed string to the page using
+                        a template literal. Then we remove the inline 'alert' message's css 'invisible' class to display
+                        the reversed string in an inline alert success message.</p>
                 </div>
             </div>
         </div>
